@@ -4,6 +4,7 @@ export default function DropdownInstructions() {
       bg-white drop-shadow-md rounded-xl
       animate__animated animate__fadeIn animate__faster
       text-left p-4
+      z-30
     ">
       <ol type="1" id="qd-instructions-list">
         <li>
