@@ -1,0 +1,10 @@
+#qd-page-loading {
+  /* Background */
+  background-size: cover;
+  background-image:
+      linear-gradient(135deg,
+      rgba(241, 255, 245, 0.9),
+      rgba(254, 239, 255, 0.9)
+    ),
+    url('../../images/environment/bg-blobs1.svg');
+}

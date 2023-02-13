@@ -1,0 +1,51 @@
+/* * CUSTOM TRANSITIONS/ANIMATIONS * */
+/* Buttons */
+button {
+  transition: all 0.1s;
+  transition-timing-function: ease;
+  opacity: 0.9;
+}
+button:hover {
+  scale: 105%;
+  opacity: 1;
+  box-shadow: 8px 8px 0px black;
+}
+button:active {
+  scale: 90%;
+  box-shadow: 2px 2px 0px black;
+}
+
+/* Inputs */
+input {
+  transition: all 0.15s;
+  transition-timing-function: ease;
+}
+input:focus {
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: var(--colAccent);
+
+  box-shadow: 0px 0px 0px black;
+
+  scale: 103%;
+}
+
+/* Links */
+a {
+  transition: all 0.05s;
+  transition-timing-function: ease;
+
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  border-bottom-color: var(--colAccent);
+
+  text-decoration: underline;
+}
+a:hover {
+  border-bottom-width: 3px;
+  filter: brightness(1.5);
+}
+a:active {
+  scale: 98%;
+  opacity: 0.85;
+}

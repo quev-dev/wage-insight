@@ -1,0 +1,32 @@
+/* * NAVIGATION * */
+#qd-nav {
+  /* Appearance */
+  background-color: white;
+
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 0.1em;
+
+  box-shadow: 2px 2px 0px black;
+
+  /* Spacing */
+  padding: 0.25em 0.5em;
+}
+
+.qd-nav-link * {
+  opacity: 0.75;
+  cursor: pointer;
+  transition: all 0.25s;
+  transition-timing-function: ease;
+}
+.qd-nav-link *:hover {
+  opacity: 1;
+  scale: 110%;
+  transform: translateY(-2px);
+}
+.qd-nav-link *:active {
+  scale: 90%;
+  opacity: 0.5;
+  transform: translateY(0px);
+}

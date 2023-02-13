@@ -1,0 +1,126 @@
+/* * INPUT FORM * */
+/* Entire Section */
+
+
+/* Sections Within Form */
+#qd-input-form section {
+  margin-bottom: 1em;
+}
+#qd-input-form section input:not(.qd-input-expense) {
+  margin: 0.5em;
+}
+
+/* * ERROR & SUCCESS MESSAGES * */
+/* Containers */
+.qd-expense-container {
+  margin: 0.25em 1em;
+}
+
+/* Expense Input (actual input box) */
+.qd-input-expense {
+  margin: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+
+  width: 90%;
+}
+.qd-input-expense:focus {
+  margin-left: 1em;
+}
+
+.qd-form-error-container {
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* Appearance */
+  padding: 0.25em;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-style: solid;
+  border-color: var(--colError);
+  border-width: 1px;
+  border-radius: 0.3em;
+  box-shadow: 2px 2px 0px var(--colError);
+
+  /* Sizing */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Font */
+  font-weight: bold;
+  font-style: italic;
+  color: var(--colError);
+}
+
+/* Icons */
+.icon-error {
+  /* Spacing */
+  margin-right: 0.5em;
+  display: inline;
+
+  /* Color */
+  filter:
+    invert(15%) sepia(90%) saturate(5629%) 
+    hue-rotate(341deg) brightness(98%) contrast(112%);
+}
+
+/* * INPUT ICONS * */
+/* Inputs */
+.qd-icon-expense {
+  /* Sizing */
+  width: 2em;
+  height: 2em;
+
+  /* Spacing */
+  position: relative;
+  padding: 0.3em;
+  top: 8px;
+
+  /* Appearance */
+  border-radius: 0.2em;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  background-color: white;
+  box-shadow: 2px 2px 0px black;
+
+  border-right-width: 2px;
+}
+
+/* * LABELS * */
+.qd-expense-label {
+  /* Appearance */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.2em;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--colAccent);
+
+  /* Sizing */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Animation */
+  transition: all 0.1s;
+  transition-timing-function: ease;
+}
+.qd-expense-label:hover {
+  scale: 105%;
+  filter: brightness(1.2);
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* .qd-input-expense {
+  background-size: 150px;
+  background: 
+    url('../../images/icons/dollar-sign.svg')
+    no-repeat scroll 5px 9px;
+  border-left-style: inset;
+  padding-left: 24px;
+} */

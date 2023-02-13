@@ -1,0 +1,23 @@
+/* * DROPDOWN INSTRUCTIONS * */
+/* Entire Container */
+#qd-dropdown-instructions {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-self: center;
+  align-items: center;
+
+  /* Sizing */
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  transform: translateY(8px);
+  width: 80%;
+}
+
+/* List & List Elements */
+#qd-instructions-list li {
+  margin: 0.5em 0.5em;
+}

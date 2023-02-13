@@ -1,0 +1,67 @@
+/* * FOOTER * */
+/* Styling for entire Footer */
+#qd-footer {
+  /* Border */
+  border-top-style: solid;
+  border-top-color: black;
+  border-top-width: 2px;
+
+  /* Coloring */
+  color: white;
+
+  /* Background */
+  background:
+    linear-gradient(270deg,
+    rgba(3, 54, 39, 0.8),
+    rgba(3, 56, 58, 0.8)
+    );
+}
+
+/* Copyright */
+#qd-copyright {
+  /* Spacing */
+  margin-bottom: 1em;
+}
+#qd-copyright p {
+  opacity: 0.75;
+}
+
+/* Make Links Block-Elements */
+#qd-footer ul {
+  /* Spacing */
+  text-align: left;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  padding: 2em;
+
+  /* Sizing */
+  width: 90%;
+
+  /* Appearance */
+  box-shadow: 4px 4px 0px black;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 0.2em;
+
+  /* Background */
+  background-color: rgba(0, 6, 29, 0.25);
+}
+#qd-footer ul li a {
+  display: block;
+  padding: 0.5em;
+  margin: 0.25em;
+  border-radius: 0.1em;
+
+  outline-style: solid;
+  outline-color: black;
+  outline-width: 1px;
+  
+  background:
+    linear-gradient(150deg,
+    rgba(0, 255, 179, 0.05),
+    rgba(0, 122, 126, 0.05)
+  );
+}

@@ -1,0 +1,170 @@
+/* * TAILWIND & OTHER IMPORTS * */
+/* Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Righteous */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * LOGO * */
+.qd-logo {
+  display: inline;
+  width: 6em;
+  height: auto;
+}
+
+/* * RESET BROWSER-SPECIFIC APPEARANCES * */
+input:focus {
+  outline: none;
+}
+
+/* * VARS * */
+/* Colors */
+:root {
+  --colAccent: rgb(0, 173, 116);
+  --colDark: rgb(0, 56, 56);
+  --colWarning: rgb(255, 60, 0);
+  --colError: rgb(255, 0, 93);
+}
+
+/* * SITE DEFAULTS * */
+html {
+  min-height: 100vh;
+}
+body {
+  /* Font */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  color: var(--colDark);
+
+  /* Background */
+  background-size: cover;
+  background-image:
+      linear-gradient(135deg,
+      rgba(241, 255, 245, 0.9),
+      rgba(254, 239, 255, 0.9)
+    ),
+    url('../../images/environment/bg-blobs4.svg');
+}
+
+/* Headers */
+h1 { font-size: 3.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.8em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Righteous', sans-serif;
+}
+
+/* Style Main Header */
+h1 {
+  background: -webkit-linear-gradient(45deg, #00ffb3, #006b96);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#qd-header-text {
+  padding: 0em 1.5em;
+  font-size: 1.25em;
+}
+
+/* Inputs */
+select, input {
+  /* Sizing */
+  border-radius: 0.2em;
+  padding: 0.25em 0.5em;
+
+  /* Appearance */
+  background-color: white;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: black;
+  box-shadow: 2px 2px 0px black;
+
+  /* Accent */
+  accent-color: var(--colAccent);
+
+  /* Appear in front of elements */
+  z-index: 25;
+}
+select, label, input[type=radio] {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+input[type=radio] {
+  outline-style: none;
+}
+
+input[type=text] {
+  box-shadow: 2px 2px 0px black;
+}
+
+/* Links */
+a {
+  color: var(--colAccent);
+}
+
+/* Buttons (anything inside should be aligned horizontally) */
+button {
+  /* Spacing */
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+
+  /* Appearance */
+  background-color: white;
+  border: black solid 1px;
+  box-shadow: 4px 4px 0px black;
+}
+button * {
+  display: inline;
+  margin: 0.1em;
+}
+button img {
+  position: relative;
+  top: -2px;
+}
+
+/* Links */
+.qd-icon-link {
+  width: 2em;
+  height: 2em;
+  filter: invert(100%);
+}
+.qd-dark-link {
+  padding: 0.25em;
+  border-radius: 0.2em;
+  background:
+    linear-gradient(270deg,
+    rgba(3, 54, 39, 0.8),
+    rgba(3, 56, 58, 0.8)
+    );
+}
+
+.qd-dropdown-button {
+  color: var(--colDark);
+}
+
+/* * WARNING * */
+/* Section */
+#qd-section-warning {
+  border-radius: 0.2em;
+  border-style: solid;
+  border-color: rgba(255, 0, 64, 0.5);
+  border-width: 1px;
+  background-color: rgba(255, 0, 64, 0.1);
+}
+/* Properties */
+.qd-warning {
+  color: var(--colWarning);
+  fill: var(--colWarning);
+}
+.qd-warning-icon {
+  filter: invert(34%) sepia(49%) saturate(7497%) hue-rotate(6deg) brightness(105%) contrast(106%);
+}
