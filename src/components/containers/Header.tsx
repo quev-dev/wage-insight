@@ -1,6 +1,6 @@
 // * IMPORTS
 // Icons
-
+import logo from '../../theme/wageInsight.png';
 
 // * HEADER
 export default function Header() {
@@ -13,7 +13,10 @@ export default function Header() {
     ">
 
       {/* Logo */}
-
+      <img src={logo} alt="Website Logo" className="
+        qd-logo
+        animate__animated animate__flipInX
+      "/>
 
       {/* Animated Header */}
       <h1 className="
