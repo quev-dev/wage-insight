@@ -20,7 +20,8 @@ import FormError from '../messages/FormError';
 import Results from './Results';
 
 // Prepare Regex Checks
-const REGEX_NUM = /^(\s*|\d+(?:\.\d+)?)$/;
+const REGEX_NUM = /^\d+(,\d{3})*(\.\d+)?$|^\d+(\.\d+)?$/
+const REGEX_NUM_OLD = /^(\s*|\d+(?:\.\d+)?)$/;
 
 // * Prepare Results to Compute
 // Functions

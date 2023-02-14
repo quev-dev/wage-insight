@@ -143,17 +143,21 @@ export function computeIncome(formData) {
   const incomeType  = formData.incomeType;
 
   // Income (Value will be altered later)
-  let income      = formData.income;
+  let income = +formData.income.toString().replace(/,/g, '');
 
   // Expenses (convert text input to number)
-  const expenseHousing    = +formData.housingExpense;
-  const expenseUtilities  = +formData.utilitiesExpense;
-  const expenseFood       = +formData.foodExpense;
-  const expensePhoneBill  = +formData.phoneBillExpense;
-  const expenseFuel       = +formData.fuelExpense;
-  const expenseCarInsurance     = +formData.carInsuranceExpense;
-  const expenseHealthInsurance  = +formData.healthInsuranceExpense;
-  const expenseOther            = +formData.otherExpense;
+  const expenseHousing = +formData.housingExpense.toString().replace(/,/g, '');
+  const expenseUtilities = +formData.utilitiesExpense.toString().replace(/,/g, '');
+  const expenseFood = +formData.foodExpense.toString().replace(/,/g, '');
+  const expensePhoneBill = +formData.phoneBillExpense.toString().replace(/,/g, '');
+  const expenseFuel = +formData.fuelExpense.toString().replace(/,/g, '');
+  const expenseCarInsurance = +formData.carInsuranceExpense.toString().replace(/,/g, '');
+  const expenseHealthInsurance = +formData.healthInsuranceExpense.toString().replace(/,/g, '');
+  const expenseOther = +formData.otherExpense.toString().replace(/,/g, '');
+
+
+  // Parse data into strings (remove commas)
+  
 
 
   // * ---------- Initialize constants
@@ -198,22 +202,27 @@ export function computeIncome(formData) {
   const weeklySavings   = ( income / averageWeeksInMonth ) - weeklyExpenses;
 
   // * ---------- Return Data
+  // Add commas to numbers where necessary
+  function insertCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   // Expenses, Taxes & Savings
   return {
     'Expenses': [
-      weeklyExpenses.toFixed(2),
-      monthlyExpenses.toFixed(2),
-      yearlyExpenses.toFixed(2)
+      insertCommas(weeklyExpenses.toFixed(2)),
+      insertCommas(monthlyExpenses.toFixed(2)),
+      insertCommas(yearlyExpenses.toFixed(2))
     ],
     'Taxes': [
-      taxesOwedWeekly.toFixed(2),
-      taxesOwedMonthly.toFixed(2),
-      taxesOwedYearly.toFixed(2),
+      insertCommas(taxesOwedWeekly.toFixed(2)),
+      insertCommas(taxesOwedMonthly.toFixed(2)),
+      insertCommas(taxesOwedYearly.toFixed(2)),
     ],
     'Savings': [
-      weeklySavings.toFixed(2),
-      monthlySavings.toFixed(2),
-      yearlySavings.toFixed(2)
+      insertCommas(weeklySavings.toFixed(2)),
+      insertCommas(monthlySavings.toFixed(2)),
+      insertCommas(yearlySavings.toFixed(2))
     ]
   };
 }
