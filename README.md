@@ -2,6 +2,9 @@ v1.0
 # Wage Insight
 ## Get rough estimates on your weekly, monthly and yearly expenses.
 
+### Live Version of Project
+[Wage Insight](https://wage-insight.netlify.app/)
+
 ### Introduction:
 This **web app** serves as a **finance calculator** that compares your income to your monthly expenses, such as insurances and groceries.
 * Created for use by U.S. residents.
