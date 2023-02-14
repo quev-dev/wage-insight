@@ -11,6 +11,11 @@ interface Props {
 // Take 'formData' & Render Component
 const Results: React.FC<Props> = ({formData}) => {
   // ? ---------- Grab Form Data
+  // Incomes (for comparison to expenses)
+  const incomeWeekly  = formData['Incomes'][0];
+  const incomeMonthly = formData['Incomes'][1];
+  const incomeYearly  = formData['Incomes'][2];
+
   // Expenses
   const expensesWeekly  = formData['Expenses'][0];
   const expensesMonthly = formData['Expenses'][1];
@@ -50,10 +55,28 @@ const Results: React.FC<Props> = ({formData}) => {
       {/* // * EXPENSES * // */}
       <section className="flex-col">
 
-        <h4>Expenses</h4>
-        <p><b>Weekly Expenses:</b> ${expensesWeekly}</p>
-        <p><b>Monthly Expenses:</b> ${expensesMonthly}</p>
-        <p><b>Yearly Expenses:</b> ${expensesYearly}</p>
+        <h4>Income & Expenses</h4>
+        {/* Weekly */}
+        <div className="
+        flex flex-wrap text-center justify-center items-center gap-x-4 mb-2
+        ">
+          <p><b>Weekly Income:</b> ${incomeWeekly}</p>
+          <p><b>Weekly Expenses:</b> ${expensesWeekly}</p>
+        </div>
+        {/* Monthly */}
+        <div className="
+        flex flex-wrap text-center justify-center items-center gap-x-4 mb-2
+        ">
+          <p><b>Monthly Income:</b> ${incomeMonthly}</p>
+          <p><b>Monthly Expenses:</b> ${expensesMonthly}</p>
+        </div>
+        {/* Yearly */}
+        <div className="
+        flex flex-wrap text-center justify-center items-center gap-x-4 mb-2
+        ">
+          <p><b>Yearly Income:</b> ${incomeYearly}</p>
+          <p><b>Yearly Expenses:</b> ${expensesYearly}</p>
+        </div>
 
       </section>
 
@@ -62,9 +85,9 @@ const Results: React.FC<Props> = ({formData}) => {
         <section>
 
           <h4>Taxes</h4>
-          <p><b>Weekly Taxes:</b> {taxesWeekly}</p>
-          <p><b>Monthly Taxes:</b> {taxesMonthly}</p>
-          <p><b>Yearly Taxes:</b> {taxesYearly}</p>
+          <p><b>Weekly Taxes:</b> ${taxesWeekly}</p>
+          <p><b>Monthly Taxes:</b> ${taxesMonthly}</p>
+          <p><b>Yearly Taxes:</b> ${taxesYearly}</p>
 
         </section>
       }

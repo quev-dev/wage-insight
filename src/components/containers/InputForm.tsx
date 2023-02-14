@@ -286,13 +286,13 @@ export default function InputForm() {
           <div className="qd-input-expense-container flex flex-col">
 
             {/* Label */}
-            <label htmlFor="carInsuranceExpense" className="qd-expense-label">Car Insurance</label>
+            <label htmlFor="carInsuranceExpense" className="qd-expense-label">Car Insurance/Payment</label>
 
             {/* Input Box */}
             <div className="qd-input-expense-container flex flex-row">
               <img className="qd-icon-expense" src={iconCarInsurance} alt="Dollar Icon"/>
               <input {...register('carInsuranceExpense', { pattern: REGEX_NUM })}
-              type="text" placeholder="Car Insurance Expense" required
+              type="text" placeholder="Car Insurance/Payment Expense" required
               className="qd-input-expense" id="carInsuranceExpense"/>
             </div>
           </div>

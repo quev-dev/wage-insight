@@ -181,9 +181,12 @@ export function computeIncome(formData) {
   else if (incomeType === 'Bi-Weekly')  income *= averageWeeksInMonth / 2;
   else if (incomeType === 'Yearly')     income /= 12;
 
-  // ! ---------- Calculate Income Tax
-  // Get Yearly Income
+  // Get different types of incomes
   const yearlyIncome  = income * 12;
+  const monthlyIncome = income;
+  const weeklyIncome  = income/averageWeeksInMonth;
+
+  // ! ---------- Calculate Income Tax
 
   // Compute taxes owed
   const taxesOwed = incomeTax(yearlyIncome, filingType, state);
@@ -209,6 +212,11 @@ export function computeIncome(formData) {
 
   // Expenses, Taxes & Savings
   return {
+    'Incomes': [
+      insertCommas(weeklyIncome.toFixed(2)),
+      insertCommas(monthlyIncome.toFixed(2)),
+      insertCommas(yearlyIncome.toFixed(2)),
+    ],
     'Expenses': [
       insertCommas(weeklyExpenses.toFixed(2)),
       insertCommas(monthlyExpenses.toFixed(2)),
