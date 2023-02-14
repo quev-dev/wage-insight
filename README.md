@@ -1,3 +1,4 @@
+v1.0
 # Wage Insight
 ## Get rough estimates on your weekly, monthly and yearly expenses.
 
